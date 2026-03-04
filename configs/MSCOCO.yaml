@@ -1,0 +1,45 @@
+# Datasets
+root_dir: ./datasets/coco2014
+dataset_name: coco2014
+image_size: 224
+train_batch_size: 64
+val_batch_size: 16
+num_workers: 4
+
+# Model
+model_name: tresnet_m
+pretrained_path: ./pretrained_models/tresnet_m_224_21k.pth
+
+# Incremental
+total_classes: 80
+base_classes: 10
+task_size: 10
+only_seen: False
+
+# Training
+epochs: 5
+base_lr: 0.0001
+incre_lr: 0.0001
+weight_decay: 0.0001
+
+# Knowledge Distillation
+kd_loss_choice: pod_spatial # or [mld_loss, sld_loss, pod_spatial]
+lambda_c: 5
+lambda_f: 180
+
+# Replay
+replay: True
+num_protos: 20
+sample_method: herding
+fix_budget: True
+buffer_size: 1000
+
+# Pseudo Label
+pseudo_training: True
+pseudo_buffer: True
+label_buffer: True
+threshold: 0.9
+buffer_old_threshold: 0.8
+buffer_new_threshold: 0.8
+threshold_sigma: 0.9
+min_threshold_sigma: 0.7

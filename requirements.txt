@@ -1,0 +1,13 @@
+continuum
+inplace_abn
+matplotlib
+numpy
+opencv_python
+pandas
+Pillow
+pycocotools
+PyYAML
+randaugment
+scipy
+termcolor
+timm
