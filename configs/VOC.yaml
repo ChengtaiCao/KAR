@@ -17,7 +17,7 @@ task_size: 2
 only_seen: False
 
 # Training
-epochs: 5
+epochs: 10
 base_lr: 0.00005
 incre_lr: 0.00005
 weight_decay: 0.0001
